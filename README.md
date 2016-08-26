@@ -1,5 +1,7 @@
 # Chrome Extension project using react, redux and react-chrome-redux
 
+It's a basic counter app inserted to every chrome tab, to test the background store, synchronous/asynchronous redux action, etc.
+
 ## Getting Started
 
 Clone repository
