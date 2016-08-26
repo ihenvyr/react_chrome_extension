@@ -1,1 +1,1 @@
-# react-chrome-extension
+# react-chrome-extension project using react-chrome-redux
