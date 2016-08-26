@@ -1,4 +1,4 @@
-# react-chrome-extension project using react-chrome-redux
+# Chrome Extension project using react, redux and react-chrome-redux
 
 ## Getting Started
 
@@ -29,4 +29,4 @@ Steps to Reproduce
 
 1. In chrome, open a new tab, it should insert an element like this <img src="http://i.imgur.com/DInfQzL.png" />
 2. Click **add count (async)** doesn't update the background store/state
-3. Open **chrome://extensions/ page** and look for **React Chrome Extension** and under Inspect views, click the **background page** to see the logs from alias action
+3. Open **chrome://extensions/** page and look for **React Chrome Extension** and under Inspect views, open the **background page** to see the logs from alias action
