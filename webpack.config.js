@@ -4,7 +4,9 @@ var extractCSS = new ExtractTextPlugin('./build/content.css');
 module.exports = {
   entry: {
     content: './src/content.js',
-    background: './src/background.js'
+    background: './src/background.js',
+    options: './src/options.js',
+    popup: './src/popup.js'
   },
   output: {
     filename: "./build/[name].js"

@@ -1,6 +1,6 @@
-# Chrome Extension project using react, redux and react-chrome-redux
+# react-chrome-extension
 
-It's a basic counter app inserted to every chrome tab, to test the background store, synchronous/asynchronous redux action, etc.
+It's a boilerplate with a basic counter app using react-chrome-redux library.
 
 ## Getting Started
 
@@ -17,18 +17,3 @@ Install dependencies, and run dev script (to build the chrome extension files)
 $ npm install
 $ npm run dev
 ```
-
-Load the extension to Chrome Browser
-
-1. Open **chrome://extensions/** page
-2. Check **Developer Mode**
-3. Load unpacked extension...
-4. Browse **react-chrome-extension/build** directory
-
-## Currently there's a problem implementing the async redux action
-
-Steps to Reproduce
-
-1. In chrome, open a new tab, it should insert an element like this <img src="http://i.imgur.com/DInfQzL.png" />
-2. Click **add count (async)** doesn't update the background store/state
-3. Open **chrome://extensions/** page and look for **React Chrome Extension** and under Inspect views, open the **background page** to see the logs from alias action

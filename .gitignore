@@ -6,3 +6,7 @@ build/content.css
 build/content.css.map
 build/content.js
 build/content.js.map
+build/options.js
+build/options.js.map
+build/popup.js
+build/popup.js.map

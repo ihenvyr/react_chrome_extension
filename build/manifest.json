@@ -6,9 +6,23 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
@@ -16,8 +30,5 @@
       "js": ["content.js"],
       "run_at": "document_end"
     }
-  ],
-  "background": {
-    "scripts": ["background.js"]
-  }
+  ]
 }

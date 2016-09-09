@@ -1,17 +1,19 @@
 import * as types from '../constants';
 
-export function addCount() {
-  console.log('addCount');
-
+export function countReset() {
   return {
-    type: types.ADD_COUNT
+    type: types.COUNT_RESET
   };
 }
 
-export function addCountAsync() {
-  console.log('addCountAsync');
-
+export function countIncrease() {
   return {
-    type: types.ADD_COUNT_ASYNC
-  }
+    type: types.COUNT_INCREASE
+  };
+}
+
+export function countDecrease() {
+  return {
+    type: types.COUNT_DECREASE
+  };
 }
