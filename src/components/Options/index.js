@@ -10,7 +10,7 @@ const OptionsContainer = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    count: state.count || 0
   };
 };
 

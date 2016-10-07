@@ -10,7 +10,7 @@ const ContentContainer = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    count: state.count || 0 // for some reason, state is an empty object {} on component init
   };
 };
 
