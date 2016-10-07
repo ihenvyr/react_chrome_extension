@@ -1,12 +1,2 @@
 .idea
 node_modules
-build/background.js
-build/background.js.map
-build/content.css
-build/content.css.map
-build/content.js
-build/content.js.map
-build/options.js
-build/options.js.map
-build/popup.js
-build/popup.js.map
