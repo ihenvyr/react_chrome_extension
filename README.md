@@ -15,5 +15,6 @@ Install dependencies, and run dev script (to build the chrome extension files)
 
 ```bash
 $ npm install
-$ npm run dev
+$ npm start     # develop
+$ npm run build # compile
 ```
