@@ -1,4 +1,5 @@
 import React from 'react';
+import './Options.scss';
 
 class Options extends React.Component {
   static propTypes = {
@@ -38,16 +39,14 @@ class Options extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul>
-          <li>
-            <a href="javascript:">{this.props.count}</a>
-            <a href="javascript:" style={{marginLeft: 5}} onClick={this.countDecrease}>[ decrease ]</a>
-            <a href="javascript:" style={{marginLeft: 5}} onClick={this.countReset}>[ reset ]</a>
-            <a href="javascript:" style={{marginLeft: 5}} onClick={this.countIncrease}>[ increase ]</a>
-          </li>
-        </ul>
-      </div>
+      <ul className="Options-container">
+        <li><strong>{this.props.count}</strong></li>
+        <li>
+          <a href="javascript:" onClick={this.countDecrease}>[ decrease ]</a>
+          <a href="javascript:" onClick={this.countReset}>[ reset ]</a>
+          <a href="javascript:" onClick={this.countIncrease}>[ increase ]</a>
+        </li>
+      </ul>
     );
   }
 }

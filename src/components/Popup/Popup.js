@@ -1,4 +1,5 @@
 import React from 'react';
+import './Popup.scss';
 
 class Popup extends React.Component {
   static propTypes = {
@@ -38,11 +39,11 @@ class Popup extends React.Component {
 
   render() {
     return (
-      <div style={{ width: 120 }}>
-        <p style={{ textAlign: 'center', fontSize: 21, margin: 0 }}>
+      <div className="Popup-container">
+        <p className="Popup-count">
           <strong>{this.props.count}</strong>
         </p>
-        <p style={{ textAlign: 'center' }}>
+        <p className="Popup-button-container">
           <button type="button" onClick={this.countDecrease}> - </button>
           <button type="button" onClick={this.countReset}> reset </button>
           <button type="button" onClick={this.countIncrease}> + </button>

@@ -1,0 +1,17 @@
+.Options-container {
+  padding: 0;
+  list-style: none;
+
+  a {
+    margin-left: 5px;
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
