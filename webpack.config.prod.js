@@ -12,7 +12,11 @@ module.exports = {
     popup: './src/popup.js',
     vendor: [
       'react',
-      'react-dom'
+      'react-dom',
+      'react-redux',
+      'react-chrome-redux',
+      'redux',
+      'redux-thunk'
     ]
   },
   output: {
