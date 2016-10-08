@@ -29,8 +29,6 @@ module.exports = {
     extractCSS,
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development') }),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'build/assets/js/vendor.js'),
-    new CopyWebpackPlugin([
-      { from: resolve(__dirname, 'src', 'static'), to: resolve(__dirname, 'build') }
-    ])
+    new CopyWebpackPlugin([{ from: resolve(__dirname, 'src', 'static'), to: resolve(__dirname, 'build') }])
   ]
 };

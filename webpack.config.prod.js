@@ -39,8 +39,6 @@ module.exports = {
         warnings: false
       }
     }),
-    new CopyWebpackPlugin([
-      { from: resolve(__dirname, 'src', 'static'), to: resolve(__dirname, 'build') }
-    ])
+    new CopyWebpackPlugin([{ from: resolve(__dirname, 'src', 'static'), to: resolve(__dirname, 'build') }])
   ]
 };
