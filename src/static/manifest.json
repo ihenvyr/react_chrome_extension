@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "assets/images/icon.png",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -16,7 +16,7 @@
     "https://*/*"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["assets/js/vendor.js", "assets/js/background.js"],
     "persistent": true
   },
   "options_ui": {
@@ -26,8 +26,8 @@
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
-      "css": [ "content.css" ],
-      "js": ["content.js"],
+      "css": [ "assets/css/content.css" ],
+      "js": ["assets/js/vendor.js", "assets/js/content.js"],
       "run_at": "document_end"
     }
   ]

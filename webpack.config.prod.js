@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var extractCSS = new ExtractTextPlugin('./build/[name].css');
+var extractCSS = new ExtractTextPlugin('./build/assets/css/[name].css');
 var resolve = require('path').resolve;
 
 module.exports = {
@@ -9,12 +9,16 @@ module.exports = {
     content: './src/content.js',
     background: './src/background.js',
     options: './src/options.js',
-    popup: './src/popup.js'
+    popup: './src/popup.js',
+    vendor: [
+      'react',
+      'react-dom'
+    ]
   },
   output: {
-    filename: "./build/[name].js"
+    filename: "./build/assets/js/[name].js"
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   module: {
     loaders: [
       { test: /\.(js|jsx)$/, loader: 'babel-loader' },
@@ -23,6 +27,8 @@ module.exports = {
   },
   plugins: [
     extractCSS,
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') }),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'build/assets/js/vendor.js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
