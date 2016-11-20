@@ -6,10 +6,10 @@ var resolve = require('path').resolve;
 
 module.exports = {
   entry: {
-    content: './src/content.js',
-    background: './src/background.js',
-    options: './src/options.js',
-    popup: './src/popup.js',
+    content: './src/entry.content.js',
+    background: './src/entry.background.js',
+    options: './src/entry.options.js',
+    popup: './src/entry.popup.js',
     vendor: [
       'react',
       'react-dom',

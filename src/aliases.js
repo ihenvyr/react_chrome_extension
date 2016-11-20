@@ -1,5 +1,5 @@
-import * as types from '../constants';
-import Storage from '../storage';
+import * as types from './constants';
+import Storage from './storage';
 const storage = Storage();
 
 const countReset = (originalAction) => {
