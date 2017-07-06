@@ -14,7 +14,13 @@ $ cd react-chrome-extension
 Install dependencies, and run dev script (to build the chrome extension files)
 
 ```bash
-$ npm install
+$ npm install   # install dependencies
 $ npm start     # develop
 $ npm run build # compile
+```
+
+```bash
+$ yarn          # install dependencies
+$ yarn start    # develop
+$ yarn build    # compile
 ```
