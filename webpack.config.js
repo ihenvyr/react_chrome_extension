@@ -11,12 +11,14 @@ module.exports = {
     options: './src/entry.options.js',
     popup: './src/entry.popup.js',
     vendor: [
+      'prop-types',
       'react',
       'react-dom',
       'react-redux',
       'react-chrome-redux',
       'redux',
-      'redux-thunk'
+      'redux-thunk',
+      'styled-components',
     ]
   },
   output: {
@@ -26,13 +28,13 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.(js|jsx)$/, loader: 'babel-loader' },
-      { test: /\.scss$/i, loader: extractCSS.extract(['css','sass']) }
+      { test: /\.scss$/i, loader: extractCSS.extract(['css-loader','sass-loader']) }
     ]
   },
   plugins: [
     extractCSS,
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development') }),
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'build/assets/js/vendor.js'),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'build/assets/js/vendor.js' }),
     new CopyWebpackPlugin([{ from: resolve(__dirname, 'src', 'static'), to: resolve(__dirname, 'build') }])
   ]
 };

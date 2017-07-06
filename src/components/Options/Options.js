@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Options.scss';
 
 class Options extends React.Component {
   static propTypes = {
-    count: React.PropTypes.number.isRequired,
-    countReset: React.PropTypes.func.isRequired,
-    countIncrease: React.PropTypes.func.isRequired,
-    countDecrease: React.PropTypes.func.isRequired
+    count: PropTypes.number.isRequired,
+    countReset: PropTypes.func.isRequired,
+    countIncrease: PropTypes.func.isRequired,
+    countDecrease: PropTypes.func.isRequired
   };
   static defaultProps = {};
   state = {};
