@@ -1,6 +1,6 @@
 # react-chrome-extension
 
-It's a boilerplate with a basic counter app using react-chrome-redux library.
+It's a boilerplate with a basic counter app using webext-redux library.
 
 ## Getting Started
 
@@ -17,10 +17,4 @@ Install dependencies, and run dev script (to build the chrome extension files)
 $ npm install   # install dependencies
 $ npm start     # develop
 $ npm run build # compile
-```
-
-```bash
-$ yarn          # install dependencies
-$ yarn start    # develop
-$ yarn build    # compile
 ```

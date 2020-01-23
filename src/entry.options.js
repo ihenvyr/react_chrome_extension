@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Store } from 'react-chrome-redux';
+import { Store } from 'webext-redux';
 import OptionsContainer from './components/Options';
 
 const store = new Store({

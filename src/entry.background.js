@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
-import { wrapStore, alias } from 'react-chrome-redux';
+import { wrapStore, alias } from 'webext-redux';
 import * as types from './constants';
 import aliases from './aliases';
 import Storage from './storage';
@@ -15,14 +15,16 @@ const store = createStore(
 
 // listen to storage changes
 chrome.storage.onChanged.addListener((changes, namespace) => {
-  for (var key in changes) {
-    var storageChange = changes[key];
-    console.log('Storage key "%s" in namespace "%s" changed. ' +
-      'Old value was "%s", new value is "%s".',
-      key,
-      namespace,
-      storageChange.oldValue,
-      storageChange.newValue);
+  for (let key in changes) {
+    if (changes.hasOwnProperty(key)) {
+      const storageChange = changes[key];
+      console.log('Storage key "%s" in namespace "%s" changed. ' +
+        'Old value was "%s", new value is "%s".',
+        key,
+        namespace,
+        storageChange.oldValue,
+        storageChange.newValue);
+    }
   }
 });
 
